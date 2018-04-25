@@ -1,0 +1,32 @@
+﻿@model BirthdayCardGenerator.Models.BirthdayCard
+
+<!DOCTYPE html>
+
+<h1>Birthday Card Sent</h1>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Confirmation</title>
+</head>
+<body>
+    <table cellpadding="5">
+
+        <tr>
+            <td><label>From:</label></td>
+            <td> @Model.From</td>
+        </tr>
+
+        <tr>
+            <td><label>To:</label>
+            <td>@Model.To</td>
+        </tr>
+
+        <tr>
+            <td><label>Message: </label></td>
+            <td>@Model.Message</td>
+        </tr>
+
+    </table>
+</body>
+</html>

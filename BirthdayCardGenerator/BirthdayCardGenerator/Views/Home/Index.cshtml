@@ -1,0 +1,38 @@
+﻿@model BirthdayCardGenerator.Models.BirthdayCard
+
+<!DOCTYPE html>
+
+<h1>Send a Birthday Card</h1>
+
+<html>
+
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary()
+
+        <table cellpadding="5">
+
+            <tr>
+                <td><label>From:</label></td>
+                <td> @Html.TextBoxFor(t => t.From)</td>
+            </tr>
+
+            <tr>
+                <td><label>To:</label>
+                <td>@Html.TextBoxFor(t => t.To)</td>
+            </tr>
+
+            <tr>
+                <td><label>Message: </label></td>
+                <td>@Html.TextBoxFor(t => t.Message)</td>
+            </tr>
+
+        </table>
+
+        <input class="btn btn-success" type="submit" value="Send Card" />
+
+    }
+
+</body>
+</html>
