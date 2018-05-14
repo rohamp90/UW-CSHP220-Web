@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_IndexLayoutPage.cshtml";
+}
+<body>
+    <section id="intro" class="demo">
+
+        <h1>
+            Welcome to My ASP.NET Project
+        </h1>
+
+        <p class="info">
+            This virtual "Learning Center" is a demo of a multi-layer architectured MVC website utilizing SQL database.
+        </p>
+
+        <a style="margin-left:-80px" href="#LearningCenter"><span></span>Start!</a>
+
+    </section>
+    <section id="LearningCenter" style="height: 0">
+        <div class="jumbotron">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div style="text-align:center" class="zoom">
+                        <p class="header">
+                            <a href="~/home/classlist">
+                                <img src="~/Content/Class_List.png" style="width:150px;height:150px; padding-bottom:10px;" />
+                                List of All Classes
+                            </a>
+                        </p>
+                        <p class="description">See all our available class offerings</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div style="text-align:center" class="zoom">
+                            <p class="header">
+                                <a href="~/home/enrollinclass">
+                                    <img src="~/Content/Add_Class.png" style="width:150px;height:150px; padding-bottom:10px;" />
+                                    Enroll in a class
+                                </a>
+                            </p>
+                            <p class="description">Take a new class, Expand your knowledge!</p>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div style="text-align:center" class="zoom">
+                           <p class="header">
+                            <a href="~/home/studentclasses">
+                               <img src="~/Content/Enrolled_Classes.png" style="width:150px;height:150px; padding-bottom:10px;" />
+                                Your enrolled classes
+                                </a>
+                           </p>
+                           <p class="description">See all classes you are currently enrolled in.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+        </div>
+    </section>
+</body>

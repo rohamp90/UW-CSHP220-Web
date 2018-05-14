@@ -1,0 +1,33 @@
+﻿@model LearningCenter.WebSite.Models.IndexModel
+@{
+    ViewBag.Title = "Enroll in a Class";
+}
+<div class="jumbotron text-center" style=" background: url(/Content/background-3.jpg) no-repeat center;background-size:cover; color:palevioletred; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
+        <h1>Enroll In a Class</h1>
+    </div>
+
+
+    @{
+        List<SelectListItem> listItems = new List<SelectListItem>();
+
+        foreach (var item in Model.classlist)
+        {
+            listItems.Add(new SelectListItem
+            {
+                Text = item.Name,
+                Value = item.Id.ToString()
+            });
+        }
+
+
+    }
+    @using (Html.BeginForm())
+    {
+        <div class="input-group">
+
+            @Html.DropDownListFor(x => x.classToAdd, listItems, "-- Select a Class --", new { @class = "form-control" })
+            <span class="input-group-addon" style="width:0px; padding-left:0px; padding-right:0px; border:none;"></span>
+            <input type="submit" value="Add Class" class="btn" style="margin-left:10px">
+        </div>
+    }
+

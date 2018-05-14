@@ -1,0 +1,29 @@
+﻿@model LearningCenter.WebSite.Models.IndexModel
+@{
+    ViewBag.Title = "Registered Classes";
+}
+
+
+    <div class="jumbotron jumbotron-fluid text-center" style=" background: url(/Content/background-4.jpg) no-repeat center;background-size:cover; color:white">
+        <h1>Student Classes</h1>
+    </div>
+    <div class="row">
+        <Table class="table">
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Paid</th>
+
+            </tr>
+            @foreach (var item in Model.registeredClasses)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Description</td>
+                    <td>@string.Format("{0:C}", item.Price)</td>
+                </tr>
+            }
+
+
+        </Table>
+    </div>
